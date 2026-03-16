@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium AI Assistant</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <button class="new-chat-btn" onclick="createNewChat()">+ New Chat</button>
+        <div class="chat-list" id="chatList"></div>
+    </div>
+
+    <div class="main-content">
+        <div class="chat-header">
+            AI Assistant
+            <div class="header-controls">
+                <button class="header-btn" id="soundToggleBtn" title="Toggle Auto-Speech">🔇 Sound Off</button>
+                <button class="header-btn" id="shareBtn" title="Share Chat">📤 Share</button>
+            </div>
+        </div>
+
+        <div class="chat-history" id="chatHistory"></div>
+
+        <div class="input-area">
+            <input type="file" id="fileUpload" style="display: none;"
+                accept="image/*,.txt,.py,.java,.js,.html,.css,.csv,.cpp">
+            <button class="action-btn" id="attachBtn" title="Attach Code, CSV, or Image">📎</button>
+            <button class="action-btn" id="micBtn" title="Click to speak">🎤</button>
+            <input type="text" id="userInput" placeholder="Type a message or describe the attachment..."
+                autocomplete="off">
+            <button class="send-btn" id="sendBtn">Send</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
